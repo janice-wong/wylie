@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  get '/search' => 'drugs#search'
-  post '/results' => 'drugs#results'
+  namespace :api do
+    namespace :v1 do
+      get '/drugs' => 'drugs#index'
+      get '/search' => 'drugs#search'
+    end
+  end
+
   get '/' => 'drugs#index'
 end
