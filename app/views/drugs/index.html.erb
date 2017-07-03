@@ -1,0 +1,9 @@
+<div id="app">
+  {{ message }}
+</div>
+
+<% @drugs.each do |drug| %>
+  <p><%= drug.name %></p>
+  <p><%= drug.side_effects %></p>
+  <hr>
+<% end %>
