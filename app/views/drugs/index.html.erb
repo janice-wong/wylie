@@ -13,8 +13,8 @@
     <div class="row">
       <div class="col-md-6 white-space">
         <table v-if="searchComplete" class="table table-bordered table-striped">
-          <col width="20px" />
-          <col width="30px" />
+          <col width="20px">
+          <col width="30px">
           <thead>
             <tr>
               <th>Name</th>
@@ -28,6 +28,11 @@
             </tr>
           </tbody>
         </table>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6" v-if="searchComplete">
+        <%= link_to "Download PDF", download_path(@drugs, format: "pdf") %>
       </div>
     </div>
   </div>

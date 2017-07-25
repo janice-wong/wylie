@@ -1,0 +1,24 @@
+<div class="margin">
+  <div id="app">
+    <div class="row">
+      <div class="col-md-6 white-space">
+        <table class="table table-bordered table-striped">
+          <col width="20px">
+          <col width="30px">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Side Effects</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="drug in Drugs">
+              <td>{{ drug.name }}</td>
+              <td>{{ drug.effects }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
